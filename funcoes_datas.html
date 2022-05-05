@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+    <script>
+
+        var data = new Date()
+        /*
+        document.write(data.getDate() + '/')
+        document.write(data.getMonth() + 1 + '/')
+        document.write(data.getFullYear())
+        */
+
+        /*
+        //adicionar / remover dias
+        document.write(data.toString())
+        data.setDate(data.getDate() + 365) //adicionando dia //  - 1 remove
+        document.write('<hr/>')
+        document.write(data.toString())
+        document.write('<br/><br/><hr/>')
+
+        //adicionar / remover meses
+        document.write(data.toString())
+        data.setMonth(data.getMonth() + 1) //adicionando mês //  - 1 remove
+        document.write('<hr/>')
+        document.write(data.toString())
+        document.write('<br/><br/><hr/>')
+
+        //adicionar / remover ano
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear() + 1) //adicionando ano //  - 1 remove
+        document.write('<hr/>')
+        document.write(data.toString())
+        */
+
+        //calculo entre duas datas
+
+        //05/05/2022
+        var data1 = new Date(2022, 4, 5)
+
+        //25/12/2022
+        var data2 = new Date(2022, 11, 25)
+
+        document.write(data1.toString())
+        document.write('<hr/>')
+        document.write(data2.toString())
+
+        document.write('<br/><br/><hr/>')
+
+        //converter datas para algo que possamos calcular
+        document.write(data1.getTime())
+        document.write('<hr/>')
+        document.write(data2.getTime())
+
+        // getTime pega a data padrão computacional de 01 de janeiro de 1970 
+        //até a data informada (vai calcular em m/s o tempo de cada data para 
+        //poder gerar valor que possam ser calculados)
+
+        document.write('<br/><br/><hr/>')
+
+        //encontrar a qtde de m/s entre a data1 e data2
+        var milisegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milisegundos_entre_datas) //Math.abs retorna valor absoluto ou seja, um valor positivo
+
+        document.write('<br/><br/><hr/>')
+
+        //1 dia tem 24 horas, uma hora tem 60 minutos, 
+        //1 minuto tem 60 segundos e cada segundo tem 1000 m/s
+        //então quantos m/s tem em um dia?
+        var milisegundos_por_dias = (1*24*60*60*1000)
+        document.write('1 dia tem: ' + milisegundos_por_dias + ' milisegundos')
+
+        document.write('<br/><br/><hr/>')
+
+        document.write('A diferença entre data 1 e data 2 é de: ' + Math.ceil(milisegundos_entre_datas / milisegundos_por_dias) + ' dia(s)')
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
