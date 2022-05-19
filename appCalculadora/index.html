@@ -31,8 +31,8 @@
       }
 
       .zero {
-        width: 130px;
-        /*width: 60px; /* tamanho para adicionar outro botão ao lado*/
+        /*width: 130px;*/
+        width: 60px; /* tamanho para adicionar outro botão ao lado*/
       }
 
       .resultado {
@@ -86,7 +86,7 @@
 
             <div class="row" style="margin-top: -60px">
               <button onclick="calcular('valor', 0)" type="button" class="btn btn-dark zero btn-lg font-weight-light">0</button>
-              <!-- <button onclick="calcular('acao', '←')" type="button" class="btn btn-dark btn-lg font-weight-light">←</button> -->
+              <button onclick="calcular('acao', '←')" type="button" class="btn btn-dark btn-lg font-weight-light">←</button>
               <button onclick="calcular('acao', '.')" type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
             </div>
           </div>
@@ -108,8 +108,8 @@
             document.getElementById('resultado').value += valor
           }
 
-          //if(valor === '←'){
-          //}
+          if(valor === '←'){
+          }
 
           if(valor === '='){
             var valor_campo = eval(document.getElementById('resultado').value)
